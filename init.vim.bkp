@@ -1,0 +1,26 @@
+filetype plugin indent on
+
+set number relativenumber
+
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave    * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter      * set norelativenumber
+augroup END
+
+set noexpandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+set smartindent
+set cindent
+
+set hlsearch
+set incsearch
+set cursorline
+set laststatus=2
+set showcmd
+
+set splitbelow
+set splitright
