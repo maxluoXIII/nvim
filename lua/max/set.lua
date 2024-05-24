@@ -39,7 +39,9 @@ vim.g.mapleader = " "
 
 -- vim.o.shell = '"C:/Program Files/Git/bin/bash.exe"'
 vim.o.shell = "nu"
-vim.opt.shellslash = true
+if vim.fn.has("win32") > 0 then
+    vim.opt.shellslash = true
+end
 vim.opt.shellcmdflag = "-c"
 vim.opt.shellquote = ""
 vim.opt.shellxquote = ""
